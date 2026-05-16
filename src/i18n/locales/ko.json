@@ -1,0 +1,57 @@
+{
+  "popup": {
+    "introduction": {
+      "title": "자동 Youtube Shorts 아래로 스크롤",
+      "subtitle": "이 확장 프로그램을 사용하면 YouTube Shorts를 자동으로 아래로 스크롤할 수 있습니다."
+    },
+    "exec": {
+      "title": "실행 방법",
+      "connect": "접속"
+    },
+    "use": {
+      "title": "사용 방법",
+      "text-1": "영상 상단에 스위치 및 옵션 버튼이 생성됩니다.",
+      "text-2": "스위치를 켜면 자동 재생이 시작됩니다.",
+      "text-3": "스위치를 끄면 자동 재생이 취소됩니다."
+    },
+    "errorResponse": {
+      "title": "에러 조치 사항",
+      "text-1": "Youtube ➡ Short 접속시, 새로고침(F5)을 한번 해주셔야 사용 가능합니다.",
+      "text-2": "에러 발생시, 페이지 새로고침(F5) 해주시면 정상적으로 사용 가능 합니다."
+    },
+    "explanation": {
+      "title": "기부",
+      "comein": " 들어오셔서",
+      "text-1": " ⭐를 눌려주시면 큰 힘이 됩니다. 감사합니다"
+    }
+  },
+  "tooltip": {
+    "disableAutoPlay": "자동재생 사용 중지",
+    "enableAutoPlay": "자동재생 사용 설정",
+    "setting": "설정",
+    "downloadLinkOpen": "다운로드 링크 열기"
+  },
+  "options": {
+    "cc": {
+      "title": "자막",
+      "enabled": "사용",
+      "disabled": "사용 안함"
+    },
+    "playBackRate": {
+      "title": "재생 속도"
+    },
+    "windowOverlay": {
+      "title": "오버레이",
+      "show": "보이기",
+      "hide": "숨기기"
+    },
+    "videoVol": {
+      "title": "소리"
+    },
+    "dislike": {
+      "title": "싫어요",
+      "show": "보기"
+    }
+  }
+}
+

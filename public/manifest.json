@@ -1,0 +1,30 @@
+{
+  "name": "1Cookie",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "permissions": [
+    "tabs",
+    "cookies",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "description": "Cookie data save and load",
+  "icons": {
+    "16": "16x16.png",
+    "32": "32x32.png",
+    "48": "48x48.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "16x16.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "incognito": "spanning"
+}
