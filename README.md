@@ -6,6 +6,10 @@
 
 ---
 
+<div align="center">
+ <img alt="1Cookie" src="./docs/screenshot.png">
+</div>
+
 ### Features
 
 - **Query** — Collects cookies from all frames (including nested iframes) in the current tab, grouped by origin
