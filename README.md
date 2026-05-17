@@ -1,64 +1,106 @@
 <div align="center">
-  <img width="80" alt="icon_main" src="https://user-images.githubusercontent.com/34180230/222903851-bc1b56d4-480f-4f4d-b408-33db18fc151b.png">
+  <img width="80" alt="1Cookie" src="./docs/icon.png">
+  <h1>1Cookie</h1>
+  <p>A Chrome extension to save, restore, and copy cookies from the current tab.</p>
 </div>
 
-<h1>쿠키 데이터 저장 및 로드</h1>
-<p>특정 사이트의 쿠키를 저장하고, 다시 불러와 자동으로 로그인 상태를 복원하는 Chrome 확장 프로그램입니다.</p>
+---
+
+### Features
+
+- **Query** — Collects cookies from all frames (including nested iframes) in the current tab, grouped by origin
+- **Save** — Saves checked cookies per origin to `chrome.storage.local`
+- **Restore** — Injects saved cookies back into the current tab and reloads the page
+- **Copy** — Copies saved or checked cookies to the clipboard, grouped by origin
+- **Saved badge** — Shows a "Saved" badge on origins and a timestamp chip on individual cookies that have been saved
+- **i18n** — Supports 8 languages: Korean, English, Simplified Chinese, Traditional Chinese, Japanese, Russian, Indonesian, German
 
 ---
 
-### 기능
+### How to Use
 
-- **쿠키 저장** : 현재 탭의 도메인 쿠키를 `chrome.storage`에 저장
-- **쿠키 로드** : 저장된 쿠키를 불러와 현재 탭에 자동 주입
-- **쿠키 삭제** : 저장된 쿠키 데이터 초기화
-- **다중 도메인** : 도메인별로 독립적으로 쿠키 관리
+1. Navigate to the site you want to save cookies for
+2. Open the extension popup → click **Query**
+3. Check the cookies you want to save → click **Save**
+4. On your next visit, open the popup → click **Restore**
+5. Saved cookies are injected and the page reloads automatically
 
----
-
-### 사용 방법
-
-1. 로그인이 필요한 사이트에 접속 후 로그인
-2. 확장 프로그램 팝업 열기 → **저장** 버튼 클릭
-3. 이후 재접속 시 팝업 열기 → **로드** 버튼 클릭
-4. 쿠키가 자동으로 주입되어 로그인 상태 복원
+> **Tip:** You can use Restore without querying first — it will inject all saved cookies for the current origin.
 
 ---
 
-### 권한
+### Permissions
 
-| 권한 | 용도 |
-|------|------|
-| `cookies` | 쿠키 읽기 / 쓰기 |
-| `storage` | 쿠키 데이터 로컬 저장 |
-| `tabs` | 현재 탭 URL 및 도메인 확인 |
-| `host_permissions` | 대상 도메인 쿠키 접근 |
+| Permission | Purpose |
+|------------|---------|
+| `cookies` | Read and write cookies |
+| `storage` | Store cookie snapshots locally |
+| `tabs` | Get the current tab's URL and ID |
+| `scripting` | Collect origins from all frames including iframes |
+| `host_permissions` | Access cookies across all domains |
 
 ---
 
-### Dev
+### Storage Structure
 
+Cookies are stored in `chrome.storage.local` with the following shape:
+
+```ts
+{
+  [tabOrigin: string]: {
+    [cookieOrigin: string]: {
+      cookies: SavedCookie[];
+      savedAt: string; // ISO 8601
+    }
+  }
+}
 ```
- - ADD: 쿠키 저장 / 로드 / 삭제 기능
- - ADD: 도메인별 쿠키 분리 저장
- - ADD: Popup UI (저장 · 로드 · 초기화 버튼)
+
+---
+
+### Known Behaviors
+
+- Opaque origins (`"null"`) from sandboxed iframes are filtered out and skipped
+- `hostOnly` cookies (no dot prefix on domain) are injected without the `domain` field to preserve their host-only status
+- Auto-injection on tab navigation was intentionally removed — restore is manual only
+
+---
+
+### Build
+
+```bash
+# Production build
+npm run build
+
+# Development (watch mode)
+npm start
 ```
+
+Load the `dist/` folder as an unpacked extension in `chrome://extensions`.
+
+---
 
 ### Release
 
 ```
 Version 1.0.0
-  - INIT: 프로젝트 초기 설정
+  - ADD: Query cookies from all frames including nested iframes
+  - ADD: Save / Restore / Copy per origin
+  - ADD: Saved badge and savedAt timestamp chip
+  - ADD: Custom tooltip on Restore button
+  - ADD: Auto page reload after cookie injection
+  - ADD: i18n support (8 languages)
+  - FIX: hostOnly cookie domain handling
+  - FIX: Opaque origin filtering
+  - MOD: Removed auto-inject on tab change
 ```
 
 ---
 
-### 주의사항
+### Security Note
 
-- 쿠키에는 세션 토큰 등 민감한 정보가 포함될 수 있습니다.
-- `chrome.storage.local`에 저장되므로 브라우저 외부로 유출되지 않습니다.
-- HttpOnly 쿠키는 `chrome.cookies` API로만 접근 가능하며, JS로는 읽을 수 없습니다.
+Cookies may contain sensitive data such as session tokens. All data is stored in `chrome.storage.local` and never leaves the browser. HttpOnly cookies are accessible only via the `chrome.cookies` API and cannot be read by JavaScript.
 
 ---
 
-<a href="https://github.com/wonkyungup/1Cookie">GitHub</a>
+<a href="https://github.com/wonkyungup/1cookie">GitHub</a>

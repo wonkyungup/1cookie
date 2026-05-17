@@ -7,32 +7,29 @@ import zhHans from './locales/zhHans.json';
 import zhHant from './locales/zhHant.json';
 import ru from './locales/ru.json';
 import jp from './locales/jp.json';
-import In from './locales/In.json';
+import In from './locales/in.json';
 import de from './locales/de.json';
-
-const language = '';
 
 i18n
   .use(initReactI18next)
   .init({
     resources: {
-      en: en,
-      ko: ko,
-      zhHans: zhHans,
-      zhHant: zhHant,
-      ru: ru,
-      jp: jp,
+      en,
+      ko,
+      zhHans,
+      zhHant,
+      ru,
+      jp,
       in: In,
-      de: de,
+      de,
     },
     fallbackLng: 'en',
-    keySeparator: false,
     interpolation: {
       escapeValue: false,
     },
   })
   .then(
-    async () => await i18next.changeLanguage(language || navigator.language),
-  );
+    () => i18next.changeLanguage(navigator.language),
+  )
 
 export default i18n;

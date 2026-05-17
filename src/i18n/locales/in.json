@@ -1,57 +1,11 @@
 {
-  "popup": {
-    "introduction": {
-      "title": "स्वचालित Youtube शॉर्ट्स को नीचे स्क्रॉल करें",
-      "subtitle": "यह एक्सटेंशन YouTube शॉर्ट्स को स्वचालित रूप से नीचे स्क्रॉल करने की अनुमति देता है।"
-    },
-    "exec": {
-      "title": "कैसे दौड़ें",
-      "connect": "जोड़ना"
-    },
-    "use": {
-      "title": "का उपयोग कैसे करें",
-      "text-1": "वीडियो के शीर्ष पर एक स्विच और विकल्प बटन बनाया गया है।",
-      "text-2": "स्विच चालू होने पर स्वचालित प्लेबैक प्रारंभ होता है।",
-      "text-3": "स्विच बंद होने पर ऑटोप्ले रद्द हो जाता है।"
-    },
-    "errorResponse": {
-      "title": "त्रुटि क्रियाएँ",
-      "text-1": "Youtube ➡ शॉर्ट तक पहुंचने पर, आपको इसका उपयोग करने के लिए एक बार रिफ्रेश (F5) करना होगा।",
-      "text-2": "यदि कोई त्रुटि होती है, तो इसे सामान्य रूप से उपयोग करने के लिए पृष्ठ (F5) को ताज़ा करें।"
-    },
-    "explanation": {
-      "title": "दान",
-      "comein": " अंदर आएं",
-      "text-1": " अगर आप ⭐ दबाते हैं, तो यह बहुत मददगार होगा।. धन्यवाद"
-    }
-  },
-  "tooltip": {
-    "disableAutoPlay": "ऑटोप्ले अक्षम करें",
-    "enableAutoPlay": "ऑटोप्ले सक्षम करें",
-    "setting": "सेटिंग",
-    "downloadLinkOpen": "डाउनलोड लिंक खोलें"
-  },
-  "options": {
-    "cc": {
-      "title": "उपशीर्षक",
-      "enabled": "उपयोग",
-      "disabled": "उपयोग नहीं किया"
-    },
-    "playBackRate": {
-      "title": "फिर से खेलना दर"
-    },
-    "windowOverlay": {
-      "title": "उपरिशायी",
-      "show": "दिखाना",
-      "hide": "छिपाना"
-    },
-    "videoVol": {
-      "title": "आवाज़"
-    },
-    "dislike": {
-      "title": "नापसन्द",
-      "show": "दिखाना"
-    }
+  "translation": {
+    "btn_query": "Kueri",
+    "btn_save": "Simpan",
+    "btn_apply": "Pulihkan",
+    "btn_copy": "Salin",
+    "label_saved": "Tersimpan",
+    "msg_query_prompt": "Silakan klik tombol Kueri.",
+    "tooltip_apply": "Memulihkan cookie yang tersimpan dan memuat ulang halaman."
   }
 }
-

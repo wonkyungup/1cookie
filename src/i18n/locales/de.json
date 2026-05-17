@@ -1,57 +1,11 @@
 {
-  "popup": {
-    "introduction": {
-      "title": "Automatische Youtube-Shorts nach unten scrollen",
-      "subtitle": "Diese Erweiterung ermöglicht es YouTube Shorts, automatisch nach unten zu scrollen."
-    },
-    "exec": {
-      "title": "wie man läuft",
-      "connect": "verbinden"
-    },
-    "use": {
-      "title": "Wie benutzt man",
-      "text-1": "Am oberen Rand des Videos werden ein Schalter und eine Optionsschaltfläche erstellt.",
-      "text-2": "Die automatische Wiedergabe beginnt, wenn der Schalter eingeschaltet wird.",
-      "text-3": "Autoplay wird abgebrochen, wenn der Schalter ausgeschaltet wird."
-    },
-    "errorResponse": {
-      "title": "Fehleraktionen",
-      "text-1": "Wenn Sie auf Youtube ➡ Short zugreifen, müssen Sie einmal aktualisieren (F5), um es zu verwenden.",
-      "text-2": "Wenn ein Fehler auftritt, aktualisieren Sie die Seite (F5), um sie normal zu verwenden."
-    },
-    "explanation": {
-      "title": "Spende",
-      "comein": " Komm herein",
-      "text-1": " Wenn Sie ⭐ drücken, ist dies eine große Hilfe. Danke"
-    }
-  },
-  "tooltip": {
-    "disableAutoPlay": "Deaktiviere Autoplay",
-    "enableAutoPlay": "Autoplay aktivieren",
-    "setting": "Einstellung",
-    "downloadLinkOpen": "Download-Link öffnen"
-  },
-  "options": {
-    "cc": {
-      "title": "Untertitel",
-      "enabled": "Verwenden Sie",
-      "disabled": "Behinderte"
-    },
-    "playBackRate": {
-      "title": "Wiedergaberate"
-    },
-    "windowOverlay": {
-      "title": "überlagern",
-      "show": "zeigen",
-      "hide": "verstecken"
-    },
-    "videoVol": {
-      "title": "Klang"
-    },
-    "dislike": {
-      "title": "nicht gefallen",
-      "show": "zeigen"
-    }
+  "translation": {
+    "btn_query": "Abfragen",
+    "btn_save": "Speichern",
+    "btn_apply": "Wiederherstellen",
+    "btn_copy": "Kopieren",
+    "label_saved": "Gespeichert",
+    "msg_query_prompt": "Bitte klicken Sie auf die Schaltfläche Abfragen.",
+    "tooltip_apply": "Stellt die gespeicherten Cookies wieder her und lädt die Seite neu."
   }
 }
-

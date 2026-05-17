@@ -1,16 +1,11 @@
-### Version 1.0.6
-FiX: Video CC Fixed
-FIX: Display Option Menu Resize
-MOD: State Manage from redux to redux-toolkit
-ADD: tsconfig.json, webpack.config.ts paths
-ADD: Video Download LINK
-  
-
-### Version 1.0.5
-FIX: Sound Muted Option Icon Change
-MOD: popup content
-
-### Version 1.0.4
-ADD: video speed control
-ADD: video window overlay Show/Hide
-ADD: video volume up/down
+### Version 1.0.0
+ADD: Cookie save/load Chrome extension initial release
+ADD: Query all cookies from current tab including nested iframes
+ADD: Save selected cookies per origin to chrome.storage.local
+ADD: Load (inject) saved cookies manually
+ADD: Copy saved cookies to clipboard grouped by origin
+ADD: "Saved" badge and savedAt timestamp chip on cookie items
+ADD: Group header toggle by origin
+FIX: Filter opaque origins ("null") from iframe collection
+FIX: hostOnly cookie domain handling on injection
+MOD: Removed auto-inject on tab change, manual load only

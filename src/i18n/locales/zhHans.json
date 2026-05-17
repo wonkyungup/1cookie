@@ -1,57 +1,11 @@
 {
-  "popup": {
-    "introduction": {
-      "title": "向下滚动自动 Youtube 短裤",
-      "subtitle": "此扩展允许 YouTube Shorts 自动向下滚动。"
-    },
-    "exec": {
-      "title": "如何运行",
-      "connect": "连接"
-    },
-    "use": {
-      "title": "如何使用",
-      "text-1": "视频顶部创建了一个开关和选项按钮。",
-      "text-2": "开关打开时自动播放开始。",
-      "text-3": "当开关关闭时自动播放被取消。"
-    },
-    "errorResponse": {
-      "title": "错误操作",
-      "text-1": "访问 Youtube ➡ Short 时，需要刷新 (F5) 一次才能使用。",
-      "text-2": "如果出现错误，刷新页面（F5）即可正常使用。"
-    },
-    "explanation": {
-      "title": "捐款",
-      "comein": " 进来",
-      "text-1": " 如果你按⭐，这将是一个很大的帮助。 谢谢"
-    }
-  },
-  "tooltip": {
-    "disableAutoPlay": "禁用自动播放",
-    "enableAutoPlay": "启用自动播放",
-    "setting": "环境",
-    "downloadLinkOpen": "打开下载链接"
-  },
-  "options": {
-    "cc": {
-      "title": "字幕",
-      "enabled": "使用",
-      "disabled": "不曾用过"
-    },
-    "playBackRate": {
-      "title": "播放速度"
-    },
-    "windowOverlay": {
-      "title": "覆盖",
-      "show": "展示",
-      "hide": "隐藏"
-    },
-    "videoVol": {
-      "title": "声音"
-    },
-    "dislike": {
-      "title": "不喜欢",
-      "show": "展示"
-    }
+  "translation": {
+    "btn_query": "查询",
+    "btn_save": "保存",
+    "btn_apply": "还原",
+    "btn_copy": "复制",
+    "label_saved": "已保存",
+    "msg_query_prompt": "请点击查询按钮。",
+    "tooltip_apply": "还原已保存的 Cookie 并刷新页面。"
   }
 }
-

@@ -1,57 +1,11 @@
 {
-  "popup": {
-    "introduction": {
-      "title": "自動Youtube Shorts下にスクロール",
-      "subtitle": "この拡張機能を使用すると、YouTubeショートを自動的に下にスクロールできます。"
-    },
-    "exec": {
-      "title": "実行方法",
-      "connect": "接続"
-    },
-    "use": {
-      "title": "使用方法",
-      "text-1": "画像の上部にスイッチとオプションボタンが作成されます。",
-      "text-2": "スイッチを入れると自動再生が始まります。",
-      "text-3": "スイッチをオフにすると自動再生がキャンセルされます。"
-    },
-    "errorResponse": {
-      "title": "エラーアクション",
-      "text-1": "Youtube ➡ Short接続時、リフレッシュ(F5)を一度してくださると使用可能です。",
-      "text-2": "エラー発生時、ページリフレッシュ（F5）していただければ正常に使用可能です。"
-    },
-    "explanation": {
-      "title": "寄付",
-      "comein": " 入ってくる",
-      "text-1": " ⭐を押すと大きな力になります。 ありがとう"
-    }
-  },
-  "tooltip": {
-    "disableAutoPlay": "自動再生を無効にする",
-    "enableAutoPlay": "自動再生を有効にする",
-    "setting": "設定",
-    "downloadLinkOpen": "ダウンロードリンクを開く"
-  },
-  "options": {
-    "cc": {
-      "title": "字幕",
-      "enabled": "使用",
-      "disabled": "無効"
-    },
-    "playBackRate": {
-      "title": "再生速度"
-    },
-    "windowOverlay": {
-      "title": "オーバーレイ",
-      "show": "見える",
-      "hide": "隠す"
-    },
-    "videoVol": {
-      "title": "音"
-    },
-    "dislike": {
-      "title": "嫌い",
-      "show": "見せる"
-    }
+  "translation": {
+    "btn_query": "照会",
+    "btn_save": "保存",
+    "btn_apply": "復元",
+    "btn_copy": "コピー",
+    "label_saved": "保存済み",
+    "msg_query_prompt": "照会ボタンを押してください。",
+    "tooltip_apply": "保存された Cookie を復元し、ページを再読み込みします。"
   }
 }
-

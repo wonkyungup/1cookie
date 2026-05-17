@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import Browser from 'webextension-polyfill';
+import { useTranslation } from 'react-i18next';
+import './i18n';
 
 type Item = { name: string; value: string; domain: string; checked: boolean };
 type Group = { origin: string; items: Item[]; open: boolean };
@@ -21,12 +23,28 @@ type CookieEntry = { cookies: SavedCookie[]; savedAt: string };
 // { tabOrigin: { cookieOrigin: CookieEntry } }
 type CookieStore = Record<string, Record<string, CookieEntry>>;
 
+const Tooltip = ({ text, children }: { text: string; children: React.ReactNode }) => {
+  const [visible, setVisible] = React.useState(false);
+  return (
+    <div style={{ position: 'relative', display: 'inline-block' }} onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
+      {children}
+      {visible && (
+        <div style={{ position: 'absolute', bottom: 'calc(100% + 6px)', left: '50%', transform: 'translateX(-50%)', background: '#333', color: '#fff', fontSize: 11, padding: '4px 8px', borderRadius: 4, whiteSpace: 'normal', width: 160, textAlign: 'center', pointerEvents: 'none', zIndex: 10 }}>
+          {text}
+          <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', border: '4px solid transparent', borderTopColor: '#333' }} />
+        </div>
+      )}
+    </div>
+  );
+};
+
 const formatDate = (d: Date) => {
   const p = (n: number) => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
 };
 
 const App = () => {
+  const { t } = useTranslation();
   const [tabOrigin, setTabOrigin] = React.useState('');
   const [tabId, setTabId] = React.useState<number>(0);
   const [tabUrl, setTabUrl] = React.useState('');
@@ -163,6 +181,7 @@ const App = () => {
         }
       }
     }
+    chrome.tabs.reload(tabId);
   };
 
   const copy = async () => {
@@ -252,13 +271,13 @@ const App = () => {
           onClick={query}
           style={{ padding: '4px 12px', background: '#fff', color: '#1976d2', border: '1px solid #1976d2', borderRadius: 4, cursor: 'pointer', fontSize: 12 }}
         >
-          조회
+          {t('btn_query')}
         </button>
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto' }}>
         {!queried ? (
-          <div style={{ padding: 16, fontSize: 13, color: '#999' }}>조회 버튼을 눌러주세요.</div>
+          <div style={{ padding: 16, fontSize: 13, color: '#999' }}>{t('msg_query_prompt')}</div>
         ) : groups.length === 0 ? (
           <div style={{ padding: 16, fontSize: 13, color: '#999' }}>쿠키가 없습니다.</div>
         ) : (
@@ -271,7 +290,7 @@ const App = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, minWidth: 0 }}>
                   <span style={{ fontSize: 12, fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{g.origin}</span>
                   {savedMap[g.origin]?.size > 0 && (
-                    <span style={{ fontSize: 10, background: '#e8f5e9', color: '#2e7d32', padding: '1px 6px', borderRadius: 8, whiteSpace: 'nowrap', flexShrink: 0 }}>저장됨</span>
+                    <span style={{ fontSize: 10, background: '#e8f5e9', color: '#2e7d32', padding: '1px 6px', borderRadius: 8, whiteSpace: 'nowrap', flexShrink: 0 }}>{t('label_saved')}</span>
                   )}
                 </div>
                 <span style={{ fontSize: 11, color: '#888', whiteSpace: 'nowrap', flexShrink: 0 }}>
@@ -316,22 +335,24 @@ const App = () => {
                 disabled={!canSave}
                 style={{ padding: '4px 12px', background: canSave ? '#1976d2' : '#ccc', color: '#fff', border: 'none', borderRadius: 4, cursor: canSave ? 'pointer' : 'default', fontSize: 12 }}
               >
-                저장
+                {t('btn_save')}
               </button>
-              <button
-                onClick={inject}
-                disabled={!canInject}
-                style={{ padding: '4px 12px', background: canInject ? '#388e3c' : '#ccc', color: '#fff', border: 'none', borderRadius: 4, cursor: canInject ? 'pointer' : 'default', fontSize: 12 }}
-              >
-                불러오기
-              </button>
+              <Tooltip text={t('tooltip_apply')}>
+                <button
+                  onClick={inject}
+                  disabled={!canInject}
+                  style={{ padding: '4px 12px', background: canInject ? '#388e3c' : '#ccc', color: '#fff', border: 'none', borderRadius: 4, cursor: canInject ? 'pointer' : 'default', fontSize: 12 }}
+                >
+                  {t('btn_apply')}
+                </button>
+              </Tooltip>
             </div>
             <button
               onClick={copy}
               disabled={!canCopy}
               style={{ padding: '4px 12px', background: '#fff', color: canCopy ? '#555' : '#bbb', border: `1px solid ${canCopy ? '#ddd' : '#eee'}`, borderRadius: 4, cursor: canCopy ? 'pointer' : 'default', fontSize: 12 }}
             >
-              복사
+              {t('btn_copy')}
             </button>
           </div>
         );
