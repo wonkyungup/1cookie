@@ -6,6 +6,7 @@
     "btn_copy": "コピー",
     "label_saved": "保存済み",
     "msg_query_prompt": "照会ボタンを押してください。",
+    "msg_no_cookies": "Cookie が見つかりません。",
     "tooltip_apply": "保存された Cookie を復元し、ページを再読み込みします。"
   }
 }

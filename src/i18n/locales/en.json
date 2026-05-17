@@ -6,6 +6,7 @@
     "btn_copy": "Copy",
     "label_saved": "Saved",
     "msg_query_prompt": "Please click the Query button.",
+    "msg_no_cookies": "No cookies found.",
     "tooltip_apply": "Restores saved cookies and reloads the page."
   }
 }

@@ -6,8 +6,8 @@ import ko from './locales/ko.json';
 import zhHans from './locales/zhHans.json';
 import zhHant from './locales/zhHant.json';
 import ru from './locales/ru.json';
-import jp from './locales/jp.json';
-import In from './locales/in.json';
+import ja from './locales/ja.json';
+import id from './locales/id.json';
 import de from './locales/de.json';
 
 i18n
@@ -19,8 +19,8 @@ i18n
       zhHans,
       zhHant,
       ru,
-      jp,
-      in: In,
+      ja,
+      id,
       de,
     },
     fallbackLng: 'en',
@@ -30,6 +30,6 @@ i18n
   })
   .then(
     () => i18next.changeLanguage(navigator.language),
-  )
+  );
 
 export default i18n;

@@ -6,6 +6,7 @@
     "btn_copy": "Salin",
     "label_saved": "Tersimpan",
     "msg_query_prompt": "Silakan klik tombol Kueri.",
+    "msg_no_cookies": "Tidak ada cookie ditemukan.",
     "tooltip_apply": "Memulihkan cookie yang tersimpan dan memuat ulang halaman."
   }
 }

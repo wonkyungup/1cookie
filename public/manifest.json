@@ -11,20 +11,23 @@
   "host_permissions": [
     "<all_urls>"
   ],
-  "description": "Cookie data save and load",
+  "description": "Save and restore cookies from any tab. Easily reuse login sessions and switch between environments by saving, restoring, and copying cookies per origin.",
   "icons": {
     "16": "16x16.png",
     "32": "32x32.png",
-    "48": "48x48.png"
+    "48": "48x48.png",
+    "128": "128x128.png"
   },
   "action": {
     "default_icon": {
-      "16": "16x16.png"
+      "16": "16x16.png",
+      "32": "32x32.png",
+      "48": "48x48.png",
+      "128": "128x128.png"
     },
     "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "background.js"
-  },
-  "incognito": "spanning"
+  }
 }

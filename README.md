@@ -80,23 +80,6 @@ Load the `dist/` folder as an unpacked extension in `chrome://extensions`.
 
 ---
 
-### Release
-
-```
-Version 1.0.0
-  - ADD: Query cookies from all frames including nested iframes
-  - ADD: Save / Restore / Copy per origin
-  - ADD: Saved badge and savedAt timestamp chip
-  - ADD: Custom tooltip on Restore button
-  - ADD: Auto page reload after cookie injection
-  - ADD: i18n support (8 languages)
-  - FIX: hostOnly cookie domain handling
-  - FIX: Opaque origin filtering
-  - MOD: Removed auto-inject on tab change
-```
-
----
-
 ### Security Note
 
 Cookies may contain sensitive data such as session tokens. All data is stored in `chrome.storage.local` and never leaves the browser. HttpOnly cookies are accessible only via the `chrome.cookies` API and cannot be read by JavaScript.

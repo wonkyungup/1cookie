@@ -6,6 +6,7 @@
     "btn_copy": "Копировать",
     "label_saved": "Сохранено",
     "msg_query_prompt": "Нажмите кнопку «Запрос».",
+    "msg_no_cookies": "Cookie не найдены.",
     "tooltip_apply": "Восстанавливает сохранённые cookie и перезагружает страницу."
   }
 }

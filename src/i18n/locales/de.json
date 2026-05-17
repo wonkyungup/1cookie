@@ -6,6 +6,7 @@
     "btn_copy": "Kopieren",
     "label_saved": "Gespeichert",
     "msg_query_prompt": "Bitte klicken Sie auf die Schaltfläche Abfragen.",
+    "msg_no_cookies": "Keine Cookies gefunden.",
     "tooltip_apply": "Stellt die gespeicherten Cookies wieder her und lädt die Seite neu."
   }
 }

@@ -47,7 +47,6 @@ const App = () => {
   const { t } = useTranslation();
   const [tabOrigin, setTabOrigin] = React.useState('');
   const [tabId, setTabId] = React.useState<number>(0);
-  const [tabUrl, setTabUrl] = React.useState('');
   const [groups, setGroups] = React.useState<Group[]>([]);
   const [savedMap, setSavedMap] = React.useState<Record<string, Set<string>>>({});
   const [savedAtMap, setSavedAtMap] = React.useState<Record<string, string>>({});
@@ -61,7 +60,6 @@ const App = () => {
       const origin = new URL(tab.url).origin;
       setTabOrigin(origin);
       setTabId(tab.id);
-      setTabUrl(tab.url);
 
       const result = await chrome.storage.local.get('cookies');
       const allCookies = (result.cookies ?? {}) as CookieStore;
@@ -279,7 +277,7 @@ const App = () => {
         {!queried ? (
           <div style={{ padding: 16, fontSize: 13, color: '#999' }}>{t('msg_query_prompt')}</div>
         ) : groups.length === 0 ? (
-          <div style={{ padding: 16, fontSize: 13, color: '#999' }}>쿠키가 없습니다.</div>
+          <div style={{ padding: 16, fontSize: 13, color: '#999' }}>{t('msg_no_cookies')}</div>
         ) : (
           groups.map((g) => (
             <div key={g.origin} style={{ borderBottom: '1px solid #f0f0f0' }}>

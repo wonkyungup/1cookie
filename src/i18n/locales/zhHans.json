@@ -6,6 +6,7 @@
     "btn_copy": "复制",
     "label_saved": "已保存",
     "msg_query_prompt": "请点击查询按钮。",
+    "msg_no_cookies": "未找到 Cookie。",
     "tooltip_apply": "还原已保存的 Cookie 并刷新页面。"
   }
 }
