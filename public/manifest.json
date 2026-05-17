@@ -11,7 +11,7 @@
   "host_permissions": [
     "<all_urls>"
   ],
-  "description": "Save and restore cookies from any tab. Easily reuse login sessions and switch between environments by saving, restoring, and copying cookies per origin.",
+  "description": "Save and restore cookies from any tab. Reuse login sessions and switch between environments with per-origin cookie management.",
   "icons": {
     "16": "16x16.png",
     "32": "32x32.png",
