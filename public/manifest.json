@@ -10,7 +10,7 @@
   "host_permissions": [
     "<all_urls>"
   ],
-  "description": "Save and restore cookies from any tab. Reuse login sessions and switch between environments with per-origin cookie management.",
+  "description": "Cookie Management.",
   "icons": {
     "16": "16x16.png",
     "32": "32x32.png",

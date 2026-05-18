@@ -1,7 +1,7 @@
 {
   "name": "1cookie",
-  "version": "1.0.0",
-  "description": "Cookie data save and load",
+  "version": "1.0.1",
+  "description": "Cookie Management.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
