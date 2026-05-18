@@ -1,12 +1,12 @@
 {
   "translation": {
     "btn_query": "Kueri",
-    "btn_save": "Simpan",
-    "btn_apply": "Pulihkan",
     "btn_copy": "Salin",
-    "label_saved": "Tersimpan",
+    "btn_save_file": "Simpan File",
     "msg_query_prompt": "Silakan klik tombol Kueri.",
     "msg_no_cookies": "Tidak ada cookie ditemukan.",
-    "tooltip_apply": "Memulihkan cookie yang tersimpan dan memuat ulang halaman."
+    "btn_select_all": "Pilih Semua",
+    "tooltip_info": "Lihat detail",
+    "label_expiring": "Segera kedaluwarsa"
   }
 }

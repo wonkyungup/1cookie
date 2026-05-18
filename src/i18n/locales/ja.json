@@ -1,12 +1,12 @@
 {
   "translation": {
     "btn_query": "照会",
-    "btn_save": "保存",
-    "btn_apply": "復元",
     "btn_copy": "コピー",
-    "label_saved": "保存済み",
+    "btn_save_file": "ファイル保存",
     "msg_query_prompt": "照会ボタンを押してください。",
     "msg_no_cookies": "Cookie が見つかりません。",
-    "tooltip_apply": "保存された Cookie を復元し、ページを再読み込みします。"
+    "btn_select_all": "すべて選択",
+    "tooltip_info": "詳細を見る",
+    "label_expiring": "まもなく期限切れ"
   }
 }

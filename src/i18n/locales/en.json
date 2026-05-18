@@ -1,12 +1,12 @@
 {
   "translation": {
     "btn_query": "Query",
-    "btn_save": "Save",
-    "btn_apply": "Restore",
     "btn_copy": "Copy",
-    "label_saved": "Saved",
+    "btn_save_file": "Save File",
     "msg_query_prompt": "Please click the Query button.",
     "msg_no_cookies": "No cookies found.",
-    "tooltip_apply": "Restores saved cookies and reloads the page."
+    "btn_select_all": "Select All",
+    "tooltip_info": "View details",
+    "label_expiring": "Expiring soon"
   }
 }

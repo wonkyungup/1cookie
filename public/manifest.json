@@ -5,7 +5,6 @@
   "permissions": [
     "tabs",
     "cookies",
-    "storage",
     "scripting"
   ],
   "host_permissions": [

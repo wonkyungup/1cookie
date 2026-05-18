@@ -1,12 +1,12 @@
 {
   "translation": {
     "btn_query": "查询",
-    "btn_save": "保存",
-    "btn_apply": "还原",
     "btn_copy": "复制",
-    "label_saved": "已保存",
+    "btn_save_file": "保存文件",
     "msg_query_prompt": "请点击查询按钮。",
     "msg_no_cookies": "未找到 Cookie。",
-    "tooltip_apply": "还原已保存的 Cookie 并刷新页面。"
+    "btn_select_all": "全选",
+    "tooltip_info": "查看详情",
+    "label_expiring": "即将过期"
   }
 }

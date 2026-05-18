@@ -1,12 +1,12 @@
 {
   "translation": {
     "btn_query": "Abfragen",
-    "btn_save": "Speichern",
-    "btn_apply": "Wiederherstellen",
     "btn_copy": "Kopieren",
-    "label_saved": "Gespeichert",
+    "btn_save_file": "Datei speichern",
     "msg_query_prompt": "Bitte klicken Sie auf die Schaltfläche Abfragen.",
     "msg_no_cookies": "Keine Cookies gefunden.",
-    "tooltip_apply": "Stellt die gespeicherten Cookies wieder her und lädt die Seite neu."
+    "btn_select_all": "Alle auswählen",
+    "tooltip_info": "Details anzeigen",
+    "label_expiring": "Läuft bald ab"
   }
 }

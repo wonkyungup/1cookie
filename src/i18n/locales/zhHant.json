@@ -1,12 +1,12 @@
 {
   "translation": {
     "btn_query": "查詢",
-    "btn_save": "儲存",
-    "btn_apply": "還原",
     "btn_copy": "複製",
-    "label_saved": "已儲存",
+    "btn_save_file": "儲存檔案",
     "msg_query_prompt": "請點擊查詢按鈕。",
     "msg_no_cookies": "找不到 Cookie。",
-    "tooltip_apply": "還原已儲存的 Cookie 並重新載入頁面。"
+    "btn_select_all": "全選",
+    "tooltip_info": "查看詳情",
+    "label_expiring": "即將到期"
   }
 }

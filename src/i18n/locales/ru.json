@@ -1,12 +1,12 @@
 {
   "translation": {
     "btn_query": "Запрос",
-    "btn_save": "Сохранить",
-    "btn_apply": "Восстановить",
     "btn_copy": "Копировать",
-    "label_saved": "Сохранено",
+    "btn_save_file": "Сохранить файл",
     "msg_query_prompt": "Нажмите кнопку «Запрос».",
     "msg_no_cookies": "Cookie не найдены.",
-    "tooltip_apply": "Восстанавливает сохранённые cookie и перезагружает страницу."
+    "btn_select_all": "Выбрать все",
+    "tooltip_info": "Подробнее",
+    "label_expiring": "Скоро истечёт"
   }
 }
