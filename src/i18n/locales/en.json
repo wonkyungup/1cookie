@@ -7,6 +7,8 @@
     "msg_no_cookies": "No cookies found.",
     "btn_select_all": "Select All",
     "tooltip_info": "View details",
-    "label_expiring": "Expiring soon"
+    "label_expiring": "Expiring soon",
+    "placeholder_search": "Search cookies...",
+    "btn_refresh": "Refresh"
   }
 }

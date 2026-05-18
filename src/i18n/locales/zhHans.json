@@ -7,6 +7,8 @@
     "msg_no_cookies": "未找到 Cookie。",
     "btn_select_all": "全选",
     "tooltip_info": "查看详情",
-    "label_expiring": "即将过期"
+    "label_expiring": "即将过期",
+    "placeholder_search": "搜索 Cookie...",
+    "btn_refresh": "刷新"
   }
 }

@@ -7,6 +7,8 @@
     "msg_no_cookies": "Tidak ada cookie ditemukan.",
     "btn_select_all": "Pilih Semua",
     "tooltip_info": "Lihat detail",
-    "label_expiring": "Segera kedaluwarsa"
+    "label_expiring": "Segera kedaluwarsa",
+    "placeholder_search": "Cari cookie...",
+    "btn_refresh": "Perbarui"
   }
 }

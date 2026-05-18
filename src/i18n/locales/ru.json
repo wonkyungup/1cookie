@@ -7,6 +7,8 @@
     "msg_no_cookies": "Cookie не найдены.",
     "btn_select_all": "Выбрать все",
     "tooltip_info": "Подробнее",
-    "label_expiring": "Скоро истечёт"
+    "label_expiring": "Скоро истечёт",
+    "placeholder_search": "Поиск cookie...",
+    "btn_refresh": "Обновить"
   }
 }

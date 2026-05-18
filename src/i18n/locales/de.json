@@ -7,6 +7,8 @@
     "msg_no_cookies": "Keine Cookies gefunden.",
     "btn_select_all": "Alle auswählen",
     "tooltip_info": "Details anzeigen",
-    "label_expiring": "Läuft bald ab"
+    "label_expiring": "Läuft bald ab",
+    "placeholder_search": "Cookies suchen...",
+    "btn_refresh": "Aktualisieren"
   }
 }

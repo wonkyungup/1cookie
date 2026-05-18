@@ -48,8 +48,10 @@ const App = () => {
   const [tabId, setTabId] = React.useState<number>(0);
   const [groups, setGroups] = React.useState<Group[]>([]);
   const [queried, setQueried] = React.useState(false);
+  const [search, setSearch] = React.useState('');
 
   const runQuery = async (id: number, origin: string) => {
+    setSearch('');
     let scriptResult: any[] = [];
     try {
       scriptResult = await (chrome.scripting as any).executeScript({
@@ -260,6 +262,19 @@ const App = () => {
 
   const hasChecked = groups.some((g) => g.items.some((i) => i.checked));
 
+  const filteredGroups = search.trim()
+    ? groups
+        .map((g) => ({
+          ...g,
+          open: true,
+          items: g.items.filter((i) =>
+            i.name.toLowerCase().includes(search.toLowerCase()) ||
+            i.domain.toLowerCase().includes(search.toLowerCase())
+          ),
+        }))
+        .filter((g) => g.items.length > 0)
+    : groups;
+
   return (
     <div style={{ minWidth: 340, maxHeight: 500, display: 'flex', flexDirection: 'column', fontFamily: 'sans-serif' }}>
       <div style={{ padding: '10px 16px 8px', borderBottom: '1px solid #eee', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -288,6 +303,18 @@ const App = () => {
         </div>
       </div>
 
+      {queried && groups.length > 0 && (
+        <div style={{ padding: '6px 12px', borderBottom: '1px solid #f0f0f0', background: '#fff' }}>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder={t('placeholder_search')}
+            style={{ width: '100%', padding: '5px 10px', fontSize: 12, border: '1px solid #ddd', borderRadius: 4, outline: 'none', boxSizing: 'border-box' }}
+          />
+        </div>
+      )}
+
       <div style={{ flex: 1, overflowY: 'auto' }}>
         {!queried ? (
           <div style={{ padding: 16, fontSize: 13, color: '#999' }}>{t('msg_query_prompt')}</div>
@@ -295,7 +322,7 @@ const App = () => {
           <div style={{ padding: 16, fontSize: 13, color: '#999' }}>{t('msg_no_cookies')}</div>
         ) : (
           <>
-            {groups.map((g) => {
+            {filteredGroups.map((g) => {
               const groupAllChecked = g.items.every((i) => i.checked);
               const groupSomeChecked = g.items.some((i) => i.checked);
               return (

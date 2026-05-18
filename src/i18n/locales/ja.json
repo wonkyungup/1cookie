@@ -7,6 +7,8 @@
     "msg_no_cookies": "Cookie が見つかりません。",
     "btn_select_all": "すべて選択",
     "tooltip_info": "詳細を見る",
-    "label_expiring": "まもなく期限切れ"
+    "label_expiring": "まもなく期限切れ",
+    "placeholder_search": "Cookie を検索...",
+    "btn_refresh": "更新"
   }
 }

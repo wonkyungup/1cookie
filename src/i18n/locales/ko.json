@@ -7,6 +7,8 @@
     "msg_no_cookies": "쿠키가 없어요.",
     "btn_select_all": "전체선택",
     "tooltip_info": "정보 보기",
-    "label_expiring": "만료예정"
+    "label_expiring": "만료예정",
+    "placeholder_search": "쿠키 검색...",
+    "btn_refresh": "새로고침"
   }
 }
