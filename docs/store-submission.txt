@@ -1,0 +1,65 @@
+================================================================
+1Cookie — Chrome Web Store Submission
+================================================================
+
+----------------------------------------------------------------
+설명 (Description)
+----------------------------------------------------------------
+Inspect, filter, and export cookies from any browser tab.
+1Cookie reads all cookies from the current tab — including
+nested iframes — groups them by origin, and lets you copy or
+download them in TXT, JSON, or CSV format.
+
+----------------------------------------------------------------
+전용 목적 설명 (Single Purpose Description)
+----------------------------------------------------------------
+1Cookie has a single purpose: to read and export cookies from
+the current browser tab. It does not modify, delete, or store
+any cookies. All data is held in memory only while the popup
+is open and is discarded when the popup closes.
+
+----------------------------------------------------------------
+tabs 사용 근거
+----------------------------------------------------------------
+The tabs permission is used to retrieve the URL and ID of the
+currently active tab. This is required to determine the origin
+of the page the user is viewing, so that the correct cookies
+can be queried via chrome.cookies.getAll().
+
+----------------------------------------------------------------
+cookies 사용 근거
+----------------------------------------------------------------
+The cookies permission is used to read all cookies associated
+with the current tab and its frames via chrome.cookies.getAll().
+This includes cookies from third-party origins loaded as iframes.
+No cookies are written or deleted by this extension.
+
+----------------------------------------------------------------
+scripting 사용 근거
+----------------------------------------------------------------
+The scripting permission is used to execute a minimal script
+(returning location.origin) in all frames of the current tab
+via chrome.scripting.executeScript({ allFrames: true }).
+This is necessary to discover the origins of nested iframes,
+so that cookies from those origins can also be queried.
+No content is injected into pages; the script only reads the
+frame's origin and returns it.
+
+----------------------------------------------------------------
+호스트 권한 사용 근거 (host_permissions: <all_urls>)
+----------------------------------------------------------------
+1Cookie is designed to work on any website the user visits.
+The target domain is not known in advance and depends entirely
+on which tab the user has open.
+
+<all_urls> is required because:
+- chrome.cookies.getAll({ url }) requires host permission for
+  the queried origin.
+- chrome.scripting.executeScript() requires host permission for
+  the tab's origin and all frame origins.
+
+The extension accesses cookies only when the popup is opened
+or the user clicks the Query button. No background activity
+or automatic data collection occurs. All data is discarded
+when the popup closes and is never transmitted externally.
+================================================================
