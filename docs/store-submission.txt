@@ -5,10 +5,37 @@
 ----------------------------------------------------------------
 설명 (Description)
 ----------------------------------------------------------------
-Inspect, filter, and export cookies from any browser tab.
-1Cookie reads all cookies from the current tab — including
-nested iframes — groups them by origin, and lets you copy or
-download them in TXT, JSON, or CSV format.
+1Cookie: A Comprehensive Cookie Management Browser Extension
+
+1Cookie is a powerful and user-friendly browser extension designed to give you full control over cookies on any website you visit. Integrated seamlessly into your browser toolbar, 1Cookie offers an intuitive popup interface where you can inspect, filter, edit, add, delete, and export cookies with ease. Tailored for privacy-conscious users, developers, testers, and anyone seeking advanced cookie management, 1Cookie unlocks detailed insights and manipulation capabilities without requiring you to open complicated developer tools.
+
+Using the latest browser APIs such as "cookies," "tabs," and "scripting," 1Cookie reads all cookies from the current page—including those set within nested iframes—providing a comprehensive overview grouped by their origin domains. You can quickly view cookie names, values, domains, expiration dates, and relevant flags to understand their behavior and impact on your browsing experience. The extension allows seamless interaction with cookies in real time: edit existing cookies, add new ones, or remove unwanted cookies selectively.
+
+One of 1Cookie’s standout features is its ability to export cookie data in multiple formats like TXT, JSON, and CSV, making it easy to save, archive, or analyze cookies externally. This functionality benefits developers needing to debug or simulate sessions, as well as users who want to back up or share cookie information securely.
+
+Security and privacy are core principles of 1Cookie. The extension operates only under explicit user interaction, with no background activity running silently. It does not collect or transmit your personal browsing information, and all cookie operations happen locally within your browser environment.
+
+Whether you’re clearing cookies to protect your privacy, managing site-specific data to troubleshoot issues, or exporting cookies for external use, 1Cookie offers a robust, elegant, and transparent toolset that streamlines cookie handling with unmatched convenience and control.
+
+Key Features:
+- Comprehensive cookie management: View, edit, add, and delete cookies from the current tab and any nested iframes.
+- Real-time cookie inspection: Instantly see cookie values, domains, expiration times, and flags within a clean popup UI.
+- Grouped by origin: Automatically organizes cookies by their domain origins for easy navigation and control.
+- Export and copy cookies: Easily export cookie data in TXT, JSON, or CSV formats or copy selected cookie details to your clipboard.
+- Selective clearing: Remove individual cookies or clear all cookies for a specific domain or the entire browser with one click.
+- Developer-friendly tools: Supports session simulation, cross-domain testing, and quick troubleshooting without opening developer tools.
+- Privacy-first design: Operates only with explicit user permission and does not collect or transmit personal data.
+
+How It Works:
+1. Install 1Cookie from your browser’s extension marketplace.
+2. Click the 1Cookie icon in the toolbar to open the popup interface on any webpage.
+3. The extension reads and displays all cookies related to the current tab, including those from nested iframes, grouped by domain.
+4. Filter, sort, and inspect cookie details such as name, value, domain, and expiration date instantly within the interface.
+5. Add new cookies or edit existing ones to modify their attributes, which are immediately applied.
+6. Delete unwanted cookies individually or clear all cookies from the current domain or across the browser.
+7. Export cookie data in your preferred format (TXT, JSON, CSV) or copy it directly to clipboard for backup or analysis.
+
+Privacy: - No personal data collected. 1Cookie accesses browser cookies solely upon user request and does not transmit, store, or collect any personal browsing data outside your local browser environment. See our privacy policy for full details.
 
 ----------------------------------------------------------------
 전용 목적 설명 (Single Purpose Description)
