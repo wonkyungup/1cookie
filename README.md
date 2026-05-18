@@ -7,7 +7,7 @@
 ---
 
 <div align="center">
- <img alt="1Cookie" src="./docs/readme-screenshot.png">
+ <img alt="1Cookie" src="./docs/1280x800.png">
 </div>
 
 ### Features
