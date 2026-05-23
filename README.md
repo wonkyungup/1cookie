@@ -10,6 +10,9 @@
  <img alt="1Cookie" src="./docs/1280x800.png">
 </div>
 
+<br />
+<a href="https://chromewebstore.google.com/detail/1cookie/cbgbbpifjnakefcdhlhfkfpdmfgpbggf">Chrome Web Store</a>
+
 ### Features
 
 - **Auto Query** — Automatically collects cookies when the popup opens; manual re-query available via the Query button
@@ -84,5 +87,3 @@ Load the `dist/` folder as an unpacked extension in `chrome://extensions`.
 Cookies may contain sensitive data such as session tokens. No data leaves the browser — everything is read in-memory via the `chrome.cookies` API and discarded when the popup closes. HttpOnly cookies are accessible only through the extension API and cannot be read by page JavaScript.
 
 ---
-
-<a href="https://github.com/wonkyungup/1cookie">GitHub</a>
